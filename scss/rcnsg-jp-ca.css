@@ -132,6 +132,7 @@
 #rcnsgJPCA .ca-introduction .ca-container .box .point .point-row {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 4px;
 }
 #rcnsgJPCA .ca-introduction .ca-container .box .point .point-row i {
   font-size: 22px;
@@ -139,9 +140,24 @@
   margin-right: 5px;
 }
 #rcnsgJPCA .ca-introduction .ca-container .box .point .point-row p {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
+@media only screen and (min-width: 769px) {
+  .ca-container .collapse {
+    display: block;
+    height: auto !important;
+    visibility: visible;
+  }
+  .ca-container .collapsing {
+    position: relative;
+    height: unset !important;
+    overflow: hidden;
+  }
+  .ca-container .more-btn {
+    display: none;
+  }
+}
 @media only screen and (max-width: 768px) {
   #rcnsgJPCA .ca-introduction .ca-container {
     flex-direction: column;
@@ -153,6 +169,7 @@
   #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile {
     width: 100%;
     flex-direction: column;
+    margin-bottom: 0;
   }
   #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .img {
     width: 100%;
@@ -164,15 +181,41 @@
   }
   #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .details {
     width: 100%;
+    padding-left: 0;
   }
-  #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .details .name, #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .details .position, #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .details .linkedin {
+  #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .details .name,
+#rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .details .position,
+#rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .details .linkedin {
     text-align: center;
   }
   #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .details .linkedin {
     display: flex;
     justify-content: center;
   }
+  #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .point .point-row {
+    margin-bottom: 4px;
+  }
+  #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .point .point-row i {
+    font-size: 18px;
+  }
+  #rcnsgJPCA .ca-introduction .ca-container .box .ca-profile .point .point-row p {
+    font-size: 1em;
+  }
   #rcnsgJPCA .ca-introduction .ca-container .box .info {
     width: 100%;
+    padding-left: 0;
+  }
+  #rcnsgJPCA .ca-introduction .ca-container .box .info .more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #0080cb;
+    font-size: 12px;
+    font-weight: 500;
+    width: 100%;
+  }
+  #rcnsgJPCA .ca-introduction .ca-container .box .info .more-btn i {
+    margin-left: 4px;
   }
 }

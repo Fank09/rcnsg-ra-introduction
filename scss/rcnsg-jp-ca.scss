@@ -139,13 +139,14 @@
           .point-row {
             display: flex;
             align-items: flex-start;
+            margin-bottom: 4px;
             i {
               font-size: 22px;
               color: #139eff;
               margin-right: 5px;
             }
             p {
-              font-size: 1em;
+              font-size: 0.9em;
             }
           }
         }
@@ -153,6 +154,26 @@
     }
   }
 }
+
+// Disable BS Collapse in PC View (greater than 796px)
+@media only screen and (min-width: 769px) {
+  .ca-container {
+    .collapse {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+    }
+    .collapsing {
+      position: relative;
+      height: unset !important;
+      overflow: hidden;
+    }
+    .more-btn {
+      display: none;
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   #rcnsgJPCA {
     .ca-introduction {
@@ -164,17 +185,21 @@
           .ca-profile {
             width: 100%;
             flex-direction: column;
+            margin-bottom: 0;
             .img {
               width: 100%;
               text-align: center;
               margin-bottom: 1rem;
               .round-img {
-                width:50% ;
+                width: 50%;
               }
             }
             .details {
               width: 100%;
-              .name, .position, .linkedin {
+              padding-left: 0;
+              .name,
+              .position,
+              .linkedin {
                 text-align: center;
               }
               .linkedin {
@@ -182,9 +207,34 @@
                 justify-content: center;
               }
             }
+            .point {
+              .point-row {
+                margin-bottom: 4px;
+                i {
+                  font-size: 18px;
+                }
+                p {
+                  font-size: 1em;
+                }
+              }
+            }
           }
           .info {
             width: 100%;
+            padding-left: 0;
+            .more-btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0;
+              color: #0080cb;
+              font-size: 12px;
+              font-weight: 500;
+              width: 100%;
+              i {
+                margin-left: 4px;
+              }
+            }
           }
         }
       }
